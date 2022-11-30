@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./listapokemons.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title></title>
+</head>
+
+<body class="container">
+    <header class="p-5 text-xl-center">
+        <h1 class="text-white display-1">Pokedex</h1>
+        <h3 class="text-white">Filtrar por Tipo:</h3>
+        <select class="form-select" id="inputSelect" onchange="getPokemonCard()">
+            <option value="Todos">Todos</option>
+            <option value="Normal">Normal</option>
+            <option value="Fire">Fire</option>
+            <option value="Electric">Electric</option>
+            <option value="Grass">Grass</option>
+            <option value="Water">Water</option>
+        </select>
+    </header>
+    <div id="container"></div>
+    <template id="cardTemplate">
+        <div class="card" id="card" style="width: 18rem;">
+            <div class="card-body">
+                <img class="card-image" height="100px" src="{{image}}"></p>
+                <h3 class="text-white font-weight-bold" id="name">{{name}}</h3>
+                <p class="text-white" id="type">{{type}}</p>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
